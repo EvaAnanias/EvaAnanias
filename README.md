@@ -27,5 +27,5 @@
   <a href = "mailto:evamariananias@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
   <a href="https://www.linkedin.com/in/eva-maria-ananias-32bba821b/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
 
-    ![Snake animation](https://github.com/EvaAnanias/EvaAnanias/commit/1b8be3104cdeb9d51689911b22f8f705ce8f0296)
+    ![Snake animation](https://github.com/EvaAnanias)
 </div>
