@@ -1,6 +1,6 @@
 ### Olá, Sou Eva Ananias 🎆
 
- ◾ Atualmente estudo Analise e Desenvolvimento de Sistemas na FATEC de Presidente prudente.
+ ◾ Atualmente estudo Analise e Desenvolvimento de Sistemas na FATEC de Presidente Prudente.
 
 - 🌱 Estou aprendendo C#
 
