@@ -2,7 +2,7 @@
 
  ◾ Atualmente estudo Analise e Desenvolvimento de Sistemas na FATEC de Presidente Prudente.
 
-- 🌱 Estou aprendendo Arduino para o TCC.
+- 🌱 Estou aprendendo Arduino.
 
 - ⚡ Curiosidades: Meu nome gamer é EveeMaryh, mas podem me chamar de Evee 🙃🎮💕
 
