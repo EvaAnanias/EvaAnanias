@@ -4,7 +4,7 @@
 
 - 🌱 Estou aprendendo Arduino.
 
-- ⚡ Curiosidades: Meu nome gamer é EveeMaryh, mas podem me chamar de Evee 🙃🎮💕
+- ⚡ Podem me chamar de EveeMaryh 🙃🎮💕
 
 <div align="center">
   <a href="https://github.com/EvaAnanias">
