@@ -1,29 +1,43 @@
-name: Generate Datas
+name: Generate Animation
 
 on:
-  schedule: # execute every 12 hours
-    - cron: "* */12 * * *"
+  # Executa automaticamente a cada 24 horas
+  schedule:
+    - cron: "0 */24 * * *" 
+  
+  # Permite executar o job manualmente a qualquer momento
   workflow_dispatch:
+  
+  # Executa em cada push na branch principal
+  push:
+    branches:
+      - main
 
 jobs:
-  build:
-    name: Jobs to update datas
+  generate:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+    
     steps:
-      # Snake Animation
-      - uses: Platane/snk@v3
+      # Cria o diretório dist se não existir
+      - run: mkdir -p dist
+
+      # Gera a animação SVG a partir do gráfico de contribuições do usuário
+      - name: Generate GitHub Contribution Grid Snake
+        uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/github-snake.svg
-            dist/github-snake-dark.svg?palette=github-dark
-            dist/ocean.gif?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: crazy-max/ghaction-github-pages@v2.6.0
+      # Push o conteúdo da pasta <build_dir> para a branch de saída
+      - name: Push to Output Branch
+        uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
           build_dir: dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  
