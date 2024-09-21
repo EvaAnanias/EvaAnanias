@@ -18,6 +18,7 @@ jobs:
 
     # Checks repo under $GITHUB_WORKSHOP, so your job can access it
       - uses: actions/checkout@v2
+      - run: mkdir -p dist  # Certifique-se de que a pasta existe
 
     # Repositorio que será utilizado para gerar os arquivos.
       - uses: Platane/snk@v3
