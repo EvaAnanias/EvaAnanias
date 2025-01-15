@@ -1,8 +1,8 @@
 ### Olá, Sou Eva Ananias 🎆
 
- ◾ Atualmente estudo Analise e Desenvolvimento de Sistemas na FATEC de Presidente Prudente.
+ ◾ Atualmente estou graduada Analise e Desenvolvimento de Sistemas.
 
-- 🌱 Estou aprendendo Arduino.
+- 🌱 Estou aprimorando meus conhecimentos 📚
 
 - ⚡ Podem me chamar de EveeMaryh 🙃🎮💕
 
