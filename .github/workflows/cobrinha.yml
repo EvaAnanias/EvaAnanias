@@ -1,14 +1,11 @@
 name: Generate Animation
 
 on:
-  # Executa automaticamente a cada 24 horas
   schedule:
     - cron: "0 */24 * * *" 
   
-  # Permite executar o job manualmente a qualquer momento
   workflow_dispatch:
   
-  # Executa em cada push na branch principal
   push:
     branches:
       - main
@@ -19,10 +16,8 @@ jobs:
     timeout-minutes: 10
     
     steps:
-      # Cria o diretório dist se não existir
       - run: mkdir -p dist
 
-      # Gera a animação SVG a partir do gráfico de contribuições do usuário
       - name: Generate GitHub Contribution Grid Snake
         uses: Platane/snk/svg-only@v3
         with:
@@ -30,10 +25,13 @@ jobs:
           outputs: |
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+          palette: > 
+            {
+              "dots": "#444444"
+            }
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # Push o conteúdo da pasta <build_dir> para a branch de saída
       - name: Push to Output Branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
