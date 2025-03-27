@@ -27,7 +27,7 @@ jobs:
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
           palette: > 
             {
-              "dots": "#444444"
+              "background": "#444444",
             }
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
