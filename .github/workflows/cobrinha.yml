@@ -2,10 +2,10 @@ name: Generate Animation
 
 on:
   schedule:
-    - cron: "0 */24 * * *" 
-  
+    - cron: "0 */24 * * *"
+
   workflow_dispatch:
-  
+
   push:
     branches:
       - main
@@ -14,7 +14,7 @@ jobs:
   generate:
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    
+
     steps:
       - run: mkdir -p dist
 
@@ -23,14 +23,16 @@ jobs:
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake.svg?palette=github-dark
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
-          palette: > 
-            {
-              "background": "#444444",
-            }
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Add black background
+        run: |
+          for f in dist/*.svg; do
+            sed -i 's|</desc>|</desc><rect x="-100" y="-100" width="10000" height="10000" fill="#000000"/>|' "$f"
+          done
 
       - name: Push to Output Branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
